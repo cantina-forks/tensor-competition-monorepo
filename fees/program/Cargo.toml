@@ -1,0 +1,21 @@
+[package]
+name = "fees-program"
+version = "0.1.0"
+edition = "2021"
+readme = "./README.md"
+license-file = "../LICENSE"
+publish = false
+
+[package.metadata.solana]
+program-id = "TFEEgwDP6nn1s8mMX2tTNPPz8j2VomkphLUmyxKm17A"
+program-dependencies = []
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+anchor-lang = { version = "0.29.0", features = ["init-if-needed"] }
+solana-program = "<1.18"
+
+[lints.rust]
+unused_must_use = "deny"

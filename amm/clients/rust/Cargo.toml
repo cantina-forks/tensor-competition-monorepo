@@ -1,0 +1,34 @@
+[package]
+name = "tensor-amm"
+version = "0.7.0"
+description = "Client crate for the Tensor Foundation amm program."
+repository = "https://github.com/tensor-foundation/amm"
+homepage = "https://github.com/tensor-foundation/amm"
+edition = "2021"
+readme = "README.md"
+license-file = "../../LICENSE"
+
+[features]
+anchor = ["anchor-lang"]
+anchor-idl-build = ["anchor-lang/idl-build"]
+serde = ["dep:serde", "dep:serde_with"]
+test-sbf = []
+
+[dependencies]
+anchor-lang = { version = "0.29.0", optional = true }
+borsh = "^0.10"
+num-derive = "^0.3"
+num-traits = "^0.2"
+serde = { version = "^1.0", features = ["derive"], optional = true }
+serde_with = { version = "^3.0", optional = true }
+solana-program = "< 1.18"
+spl-math = { version = "0.2.0", features = ["no-entrypoint"] }
+thiserror = "^1.0"
+
+[dev-dependencies]
+assert_matches = "1.5.0"
+lazy_static = "1.4.0"
+solana-program-test = ">1.14, < 1.18"
+solana-sdk = "< 1.18"
+spl-associated-token-account = "2"
+tensor-whitelist = { version = "0.1.0" }

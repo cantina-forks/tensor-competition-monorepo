@@ -1,0 +1,13 @@
+.anchor
+.cargo
+.vercel
+.DS_Store
+.vscode
+**/.DS_Store
+**/target
+**/*.rs.bk
+**/package-lock.json
+dist
+docs
+node_modules
+test-ledger
